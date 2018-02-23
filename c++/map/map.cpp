@@ -7,6 +7,8 @@ int main()
 {
 	int i;
 	map<int, string> mapStudent;
+	multimap<string, string> authors;
+
 	mapStudent.insert(pair<int, string>(1, "student_one"));
 	mapStudent.insert(pair<int, string>(2, "student_two"));
 	mapStudent.insert(pair<int, string>(3, "student_three"));
@@ -19,4 +21,11 @@ int main()
 	for(iter = mapStudent.begin(); iter != mapStudent.end(); iter++) {
 		cout << iter->first << "   " << iter->second << endl;
 	}
+	cout << "number sof student_one:" << mapStudent.count(2) << endl;
+	iter = mapStudent.find(2);
+	cout << "value:" << iter->second << endl;
+	cout << mapStudent[2] << endl;
+
+	//authors.insert("Barth, John", "Sot_Weed Factor");
+//	authors.insert("Barth, John", "Lost in the Funhouse");
 }
